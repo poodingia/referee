@@ -6,3 +6,4 @@
 
 * Những lần sau chỉ cần vào môi trường ảo và chạy `flask run --host=0.0.0.0`, không cần cài lại
 * Server trọng tài đang có 3 API, **'/init'** để nhận yêu cầu khởi tạo, **'/'** để trả về thông tin render và **'/move'** để nhận nước đi'
+* Hiện tại, tài đang trả về đúng nhưng gì đang được nhận
