@@ -2,8 +2,6 @@ from flask_cors import CORS, cross_origin
 from flask import Flask, request, jsonify, make_response
 import json
 
-HOST = 'localhost'
-
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
@@ -54,7 +52,3 @@ def handle_move():
     game_info.update(json.loads(data.decode('utf-8')))
     print(game_info)
     return 'ok'
-
-
-if __name__ == '_main_':
-    app.run(host="0.0.0.0")
