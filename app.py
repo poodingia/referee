@@ -13,8 +13,8 @@ game_info = {
     "board": [["X"], ["O"], ["X"], [" "], [" "], [" "], [" "], [" "], [" "]],
     "time1": "100",
     "time2": "100",
-    "team1_id": "xx1",
-    "team2_id": "xx2",
+    "team1_id": None,
+    "team2_id": None,
     "turn": "xx1",
     "score1": "0",
     "score2": "0"
