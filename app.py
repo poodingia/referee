@@ -15,7 +15,7 @@ game_info = {
     "time2": "100",
     "team1_id": "xx1",
     "team2_id": "xx2",
-    "turn": "123",
+    "turn": "xx1",
     "score1": "0",
     "score2": "0"
 }
@@ -30,6 +30,7 @@ def get_data():
         game_info["team1_id"] = info["team_id"]
     else:
         game_info["team2_id"] = info["team_id"]
+        game_info["turn"] = info["team_id"]
     return {
         "room_id": "xxx",
         "match_id": "xx1",
@@ -40,9 +41,14 @@ def get_data():
 @app.route('/', methods=['POST'])
 @cross_origin()
 def render_board():
+    # Code này để đổi lượt chơi nhưng đang cho một đội chơi liên tục
+    # if game_info["turn"] == game_info["team1_id"]:
+    #     game_info["turn"] = game_info["team2_id"]
+    # elif game_info["turn"] == game_info["team2_id"]:
+    #     game_info["turn"] = game_info["team1_id"]
     response = make_response(jsonify(game_info))
     print(game_info)
-    return game_info
+    return response
 
 
 @app.route('/move', methods=['POST'])
